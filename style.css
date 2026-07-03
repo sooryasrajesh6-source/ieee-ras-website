@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #07111f;
+  color: #ffffff;
+}
+
+header {
+  background: #020617;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #38bdf8;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+}
+
+.hero {
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(2, 6, 23, 0.75), rgba(2, 6, 23, 0.95)),
+    radial-gradient(circle at top, #0ea5e9, #020617 45%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.small-text {
+  font-size: 17px !important;
+  color: #cbd5e1;
+}
+
+.btn {
+  display: inline-block;
+  margin: 15px 8px;
+  padding: 13px 24px;
+  background: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0284c7;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid #38bdf8;
+}
+
+.section {
+  padding: 70px 25px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2,
+.join-section h2 {
+  font-size: 36px;
+  color: #38bdf8;
+  margin-bottom: 25px;
+}
+
+.section p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.cards,
+.team-grid,
+.event-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card,
+.team-card,
+.event-card,
+.gallery-grid div {
+  background: #0f172a;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+.card:hover,
+.team-card:hover,
+.event-card:hover {
+  transform: translateY(-7px);
+  transition: 0.3s;
+  border-color: #38bdf8;
+}
+
+.card h3,
+.team-card h3,
+.event-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.event-card span {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+.event-card button {
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+.event-card button:hover {
+  background: #0284c7;
+}
+
+.gallery-grid div {
+  font-size: 24px;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join-section {
+  text-align: center;
+  padding: 70px 25px;
+  background: linear-gradient(135deg, #0284c7, #0f172a);
+}
+
+.join-section p {
+  color: #e0f2fe;
+  font-size: 18px;
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    background: #020617;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
